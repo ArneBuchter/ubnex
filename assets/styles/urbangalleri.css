@@ -1,0 +1,184 @@
+/*........name conventio BEM................*/
+
+/*................blocks...................*/
+
+.all {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 sans-serif;
+    color: #777;
+    box-sizing: border-box
+}
+
+/*..header..*/
+.headergrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 5em 3.1em;
+    background-color: #282E34;
+    color: silver;
+    justify-content: center;
+    align-content: center;
+    grid-column-gap:  2em;
+}
+
+.ubnex {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+    color: crimson;
+    justify-self: center;
+    margin: 0;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+  
+.shop {
+    justify-self: center;
+    align-self: center;
+    font-family: fantasy;
+    color: silver;
+    font-size: 3em;
+  }
+  
+.grid {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    justify-self: space-evenly;
+    align-self: center;
+    color: silver;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-family: sans-serif;
+    font-weight: bolder;
+  }
+
+  /*....main....*/
+
+.galleri-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-evenly;
+    grid-gap: 2em;
+    padding: 3em;
+  }
+
+ /*.............elements..............*/
+ 
+ 
+ .caption__border {
+    background-color: #111;
+    color: crimson;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    font-family: sans-serif;
+    font-weight: bolder;
+   }
+  
+.bgimg__caption {
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+    align-self: center;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+   }
+
+   .galleri-grid__size{
+    object-fit: cover;
+    max-width: 100%;
+    justify-self: center;
+   }
+   
+ /*..............modyfiers...............*/
+ 
+.grid--one{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    justify-self: flex-end;
+}
+
+.grid--two{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: flex-start;
+}
+.bgimg--one {
+    background-image: url("../img/bogie.jpg");
+    filter: opacity(20%);   
+} 
+.galleri-grid__size--one{
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+} 
+  
+.galleri-grid__size--two{
+    grid-column: 5 / 6;
+    grid-row: 2 / 4;
+}
+.galleri-grid__size--three{
+    align-self: flex-end;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px){
+
+    .galleri-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: auto;
+    }
+
+    .bgimg__caption{
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+        margin: 1em;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .headergrid{
+        margin: 0;
+        width: 100%;
+    }
+
+    .galleri-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+    }
+
+    .bgimg__caption{
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        margin: 1em;
+    }
+    .caption__border{
+        font-size: 20px;
+    }   
+    .ubnex{
+        font-size: 2em;
+      }
+      .shop{
+        font-size: 2em;
+      }
+      .galleri-grid__size--one{
+        grid-column: 1 / 2;
+        grid-row: auto;
+
+    } 
+      
+    .galleri-grid__size--two{
+        grid-column: 1 / 2;
+        grid-row: auto;
+
+    }
+    .galleri-grid__size{
+        max-width: 100%;
+        justify-self: center;
+    }
+}
